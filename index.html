@@ -1,0 +1,142 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><title>RETO 5 DÍAS SIN HARINAS</title><style>
+            *{margin:0;padding:0;box-sizing:border-box;}body{font-family:system-ui;background:white;color:#1a202c;transition:all 0.3s;}.container{max-width:1200px;margin:0 auto;padding:0 20px;}
+            
+            .hero{position:relative;width:100%;min-height:500px;background-size:cover;background-position:center 30%;display:flex;flex-direction:column;justify-content:space-between;}
+            .hero-image-only{justify-content:flex-end;}
+            .hero-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:1;}
+            .hero-content-wrapper{position:relative;z-index:2;padding:60px 20px 40px;text-align:center;flex:1;display:flex;align-items:center;justify-content:center;}
+            .hero-text-color .hero-content-wrapper{padding:60px 20px 40px;}
+            .hero-logo{height:60px;margin-bottom:20px;object-fit:contain;}
+            .hero h1{font-size:2.5rem;margin-bottom:15px;text-shadow:2px 2px 4px rgba(0,0,0,0.3);}
+            .hero-subtitle{font-size:1.2rem;margin-bottom:25px;opacity:0.95;text-shadow:1px 1px 2px rgba(0,0,0,0.3);}
+            .btn-wa{display:inline-block;background:#25D366;color:white;padding:14px 35px;border-radius:50px;text-decoration:none;font-weight:bold;font-size:1.1rem;transition:transform 0.2s;box-shadow:0 4px 15px rgba(0,0,0,0.2);}
+            .btn-wa:hover{transform:scale(1.05);}
+            
+            .social-footer-bar{width:100%;background:rgba(0,0,0,0.65);backdrop-filter:blur(8px);padding:20px 20px;text-align:center;border-top:1px solid rgba(255,215,0,0.3);border-bottom:1px solid rgba(255,215,0,0.3);position:relative;z-index:2;}
+            .social-footer-title{font-size:0.85rem;text-transform:uppercase;letter-spacing:3px;color:#FFD700;margin-bottom:15px;font-weight:500;}
+            .social-icons-header{display:flex;justify-content:center;align-items:center;gap:25px;flex-wrap:wrap;}
+            .social-icon{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;transition:transform 0.2s ease;}
+            .social-icon:hover{transform:translateY(-4px);}
+            .social-circle{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:normal;transition:all 0.2s ease;background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,215,0,0.5);color:#FFD700;}
+            .social-label{font-size:0.7rem;color:rgba(255,255,255,0.85);font-weight:500;letter-spacing:0.5px;}
+            
+            .social-icon.facebook:hover .social-circle{background:#1877F2;border-color:#1877F2;color:white;box-shadow:0 0 12px rgba(24,119,242,0.5);}
+            .social-icon.instagram:hover .social-circle{background:radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);border-color:#E4405F;color:white;box-shadow:0 0 12px rgba(228,64,95,0.5);}
+            .social-icon.tiktok:hover .social-circle{background:#010101;border-color:#010101;color:#00F2EA;box-shadow:0 0 12px rgba(0,242,234,0.5);}
+            .social-icon.youtube:hover .social-circle{background:#FF0000;border-color:#FF0000;color:white;box-shadow:0 0 12px rgba(255,0,0,0.5);}
+            .social-icon.linkedin:hover .social-circle{background:#0A66C2;border-color:#0A66C2;color:white;box-shadow:0 0 12px rgba(10,102,194,0.5);}
+            .social-icon.twitter:hover .social-circle{background:#000000;border-color:#000000;color:white;box-shadow:0 0 12px rgba(0,0,0,0.5);}
+            
+            section{padding:60px 20px;}.section-title{text-align:center;font-size:2rem;margin-bottom:40px;color:#1a1a2e;}
+            .servicios-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-bottom:40px;}
+            .servicio-card{text-align:center;background:#f8f9fa;padding:20px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.05);transition:transform 0.2s;}.servicio-card:hover{transform:translateY(-5px);}
+            .servicio-titulo{font-size:1.1rem;margin-bottom:8px;}
+            .servicio-desc{font-weight:400;margin-bottom:12px;font-size:0.85rem;min-height:60px;}
+            .btn-servicio-wa{transition:background 0.2s, transform 0.2s;}.btn-servicio-wa:hover{transform:scale(1.05);background:#ff6b00dd !important;}
+            .btn-precio{transition:background 0.2s, transform 0.2s;}.btn-precio:hover{transform:scale(1.05);background:#1a252f !important;}
+            .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
+            .servicios-lista{list-style:none;text-align:center;padding-left:0;}
+            .servicios-lista li{margin-bottom:8px;}
+            .whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:100;box-shadow:0 4px 15px rgba(0,0,0,0.2);transition:transform 0.2s;}.whatsapp-float:hover{transform:scale(1.1);}.whatsapp-float a{color:white;font-size:2rem;text-decoration:none;}
+            .testimonio{background:#f8f9fa;padding:20px;border-radius:12px;border-left:4px solid #ff6b00;margin-bottom:15px;text-align:left;}
+            .testimonio-texto{margin-bottom:10px;font-style:italic;}
+            .testimonio-autor{color:#ff6b00;}
+            .beneficio{margin-bottom:12px;text-align:center;width:100%;}
+            footer{background:#1a1a2e;color:white;text-align:center;padding:30px;}footer a{color:#FFD700;text-decoration:none;}
+            .editable-text{cursor:text;transition:outline 0.1s;}.editable-text:hover{outline:1px dashed #FFD700;}.editable-img{cursor:pointer;}.editable-img:hover{outline:2px solid #FFD700;}
+            
+            @media(max-width:768px){
+                .hero{min-height:350px;}
+                .hero h1{font-size:1.8rem;}
+                .hero-content-wrapper{padding:40px 20px 30px;}
+                .social-footer-bar{padding:15px 12px;}
+                .social-footer-title{font-size:0.7rem;letter-spacing:2px;margin-bottom:10px;}
+                .social-circle{width:44px;height:44px;font-size:1.3rem;}
+                .social-label{font-size:0.6rem;}
+                .social-icons-header{gap:15px;}
+                section{padding:40px 20px;}
+                .servicios-grid{grid-template-columns:1fr;gap:20px;}
+                .servicio-desc{min-height:auto;}
+            }
+            @media(max-width:480px){
+                .social-circle{width:38px;height:38px;font-size:1.1rem;}
+                .social-icons-header{gap:12px;}
+            }
+        </style></head><body >
+        <div class="whatsapp-float"><a href="https://wa.me/59895583914">💬</a></div>
+        
+                <div class="hero hero-image-only" style="background-image: url(https://drive.google.com/thumbnail?id=1nzOOeV8PtvasMHk0-cYaG-ghoiGM8TjE&sz=w1600); background-size: cover; background-position: center 30%;">
+                    
+            <div class="social-footer-bar" style="margin-top: auto;">
+                <div class="social-footer-title">🔹 SIGUE NUESTRAS REDES SOCIALES 🔹</div>
+                <div class="social-icons-header">
+                    
+                    <a href="https://www.facebook.com/share/1Ges9a7tGZ/" target="_blank" class="social-icon facebook" rel="noopener noreferrer">
+                        <div class="social-circle">f</div>
+                        <span class="social-label">Facebook</span>
+                    </a>
+                
+                    <a href="https://instagram.com/marie_coach" target="_blank" class="social-icon instagram" rel="noopener noreferrer">
+                        <div class="social-circle">📷</div>
+                        <span class="social-label">Instagram</span>
+                    </a>
+                
+                </div>
+            </div>
+        
+                </div>
+            
+        <section><div class="container"><h2 class="section-title editable-text" data-editable="true">Quienes Somos</h2><p class="editable-text" data-editable="true" style="text-align:center; max-width:800px; margin:0 auto;">En RETO 5 DÍAS SIN HARINAS creemos que para sentirte mejor no necesitas cambiar todo de golpe. Solo necesitas dar el primer paso. 💚 Durante 5 días te acompañamos con ideas simples, orientación y hábitos que puedes aplicar en tu día a día. No buscamos perfección. Queremos ayudarte a descubrir que sí puedes empezar, sentirte mejor y seguir avanzando. ✨ Tu cambio puede comenzar hoy.</p></div></section>
+        <section style="background:#f8f9fa;"><div class="container"><h2 class="section-title editable-text" data-editable="true">🔧 Nuestros servicios</h2><div class="servicios-grid">
+                    <div class="servicio-card">
+                        <img src="https://drive.google.com/thumbnail?id=19rGghf2XptIf-077DRTLvbQ0YXvWSMFZ&sz=w1600" class="editable-img" data-editable="true" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; margin-bottom:12px;" referrerpolicy="no-referrer">
+                        <h3 class="editable-text servicio-titulo" data-editable="true" style="font-size:1.1rem; margin-bottom:8px; color:#ff6b00;">🥗 Reto 5 Días</h3>
+                        <p class="editable-text servicio-desc" data-editable="true" style="font-weight:400; margin-bottom:12px; font-size:0.85rem;">Comienza 5 días de hábitos más conscientes con orientación práctica, ideas de comidas y acompañamiento diario.</p>
+                        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            
+                            <a href="https://wa.me/59895583914?text=Hola%20RETO%205%20D%C3%8DAS%20SIN%20HARINAS%2C%20quiero%20informaci%C3%B3n%20sobre%20%F0%9F%A5%97%20Reto%205%20D%C3%ADas" class="btn-servicio-wa editable-link" style="display:inline-block; background:#ff6b00; color:white; padding:8px 16px; border-radius:50px; text-decoration:none; font-size:0.8rem; font-weight:600; transition:background 0.2s;">📱 Solicitar servicio</a>
+                        </div>
+                    </div>
+                
+                    <div class="servicio-card">
+                        <img src="https://drive.google.com/thumbnail?id=1CJDjPDsoUmFeO2LDUSJIFHjfsgg_afnw&sz=w1600" class="editable-img" data-editable="true" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; margin-bottom:12px;" referrerpolicy="no-referrer">
+                        <h3 class="editable-text servicio-titulo" data-editable="true" style="font-size:1.1rem; margin-bottom:8px; color:#ff6b00;">📋 Evaluación de Bienestar</h3>
+                        <p class="editable-text servicio-desc" data-editable="true" style="font-weight:400; margin-bottom:12px; font-size:0.85rem;">Conoce tu punto de partida y descubre qué hábitos puedes mejorar para avanzar hacia objetivos más realistas.</p>
+                        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            
+                            <a href="https://wa.me/59895583914?text=Hola%20RETO%205%20D%C3%8DAS%20SIN%20HARINAS%2C%20quiero%20informaci%C3%B3n%20sobre%20%F0%9F%93%8B%20Evaluaci%C3%B3n%20de%20Bienestar" class="btn-servicio-wa editable-link" style="display:inline-block; background:#ff6b00; color:white; padding:8px 16px; border-radius:50px; text-decoration:none; font-size:0.8rem; font-weight:600; transition:background 0.2s;">📱 Solicitar servicio</a>
+                        </div>
+                    </div>
+                
+                    <div class="servicio-card">
+                        <img src="https://drive.google.com/thumbnail?id=1piBwJflP5MXc7qW6nBMEi7b3cMrD5JKd&sz=w1600" class="editable-img" data-editable="true" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; margin-bottom:12px;" referrerpolicy="no-referrer">
+                        <h3 class="editable-text servicio-titulo" data-editable="true" style="font-size:1.1rem; margin-bottom:8px; color:#ff6b00;">🎯 Plan Personalizado</h3>
+                        <p class="editable-text servicio-desc" data-editable="true" style="font-weight:400; margin-bottom:12px; font-size:0.85rem;">Transforma lo aprendido en un plan adaptado a tu rutina para seguir avanzando con hábitos que puedas sostener.</p>
+                        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            
+                            <a href="https://wa.me/59895583914?text=Hola%20RETO%205%20D%C3%8DAS%20SIN%20HARINAS%2C%20quiero%20informaci%C3%B3n%20sobre%20%F0%9F%8E%AF%20Plan%20Personalizado" class="btn-servicio-wa editable-link" style="display:inline-block; background:#ff6b00; color:white; padding:8px 16px; border-radius:50px; text-decoration:none; font-size:0.8rem; font-weight:600; transition:background 0.2s;">📱 Solicitar servicio</a>
+                        </div>
+                    </div>
+                
+                    <div class="servicio-card">
+                        <img src="https://drive.google.com/thumbnail?id=1ShXjn0nWbCSqz4qZcb_UVscj_qPMfenr&sz=w1600" class="editable-img" data-editable="true" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; margin-bottom:12px;" referrerpolicy="no-referrer">
+                        <h3 class="editable-text servicio-titulo" data-editable="true" style="font-size:1.1rem; margin-bottom:8px; color:#ff6b00;">💚 Seguimiento & Comunidad</h3>
+                        <p class="editable-text servicio-desc" data-editable="true" style="font-weight:400; margin-bottom:12px; font-size:0.85rem;">Mantén tu motivación con seguimiento, educación y una comunidad que te acompaña más allá de los primeros 5 días.</p>
+                        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            
+                            <a href="https://wa.me/59895583914?text=Hola%20RETO%205%20D%C3%8DAS%20SIN%20HARINAS%2C%20quiero%20informaci%C3%B3n%20sobre%20%F0%9F%92%9A%20Seguimiento%20%26%20Comunidad" class="btn-servicio-wa editable-link" style="display:inline-block; background:#ff6b00; color:white; padding:8px 16px; border-radius:50px; text-decoration:none; font-size:0.8rem; font-weight:600; transition:background 0.2s;">📱 Solicitar servicio</a>
+                        </div>
+                    </div>
+                </div><div style="text-align: center; margin-top: 20px;"><h3 style="color:#ff6b00; margin-bottom:20px;" class="editable-text" data-editable="true">Salud y Bienestar / Cambio de Hábitos y Control de Peso Saludable</h3><ul class="servicios-lista" style="list-style:none; text-align:center; padding-left:0; margin:0 auto; display:inline-block;"><li style="margin-bottom:8px;">✓ Evaluación de hábitos y bienestar</li><li style="margin-bottom:8px;">✓ Plan de alimentación consciente</li><li style="margin-bottom:8px;">✓ Seguimiento personalizado</li><li style="margin-bottom:8px;">✓ Talleres de cocina práctica</li><li style="margin-bottom:8px;">✓ Comunidad de acompañamiento</li><li style="margin-bottom:8px;">✓ Programa de continuidad y control de peso saludable</li></ul></div></div></section>
+        <section><div class="container"><h2 class="section-title editable-text" data-editable="true">🌟 ¿Por qué elegirnos?</h2><div style="max-width:600px; margin:0 auto;"><div style="display: flex; flex-direction: column; align-items: center; gap: 12px;"><div class="beneficio editable-text" data-editable="true">✓ Porque no tienes que hacerlo solo/a. 💚 Durante 5 días te acompañamos paso a paso con ideas prácticas, orientación y hábitos sencillos que puedes incorporar a tu rutina. 🥗 Simple de seguir 🤝 Acompañamiento cercano 🌱 Hábitos para continuar. Empieza con 5 días. El cambio puede durar mucho más.</div></div></div></div></section>
+        <section style="background:#f8f9fa;"><div class="container"><h2 class="section-title editable-text" data-editable="true">⭐ Testimonios</h2><div class="grid-2"><div class="testimonio">
+                        <p class="testimonio-texto editable-text" data-editable="true">"“Pensé que cinco días iban a ser muy difíciles, pero me sorprendió descubrir opciones sencillas para organizar mis comidas. Lo que más valoré fue el acompañamiento y sentir que podía empezar sin hacer todo perfecto.”"</p>
+                        <strong class="testimonio-autor editable-text" data-editable="true">— Mariana, 46 años</strong>
+                    </div><div class="testimonio">
+                        <p class="testimonio-texto editable-text" data-editable="true">"“Llegué buscando controlar mejor mi alimentación y terminé aprendiendo mucho sobre mis propios hábitos. Me gustó que fuera práctico y fácil de incorporar a mi rutina. Los cinco días me dieron el impulso para seguir cuidándome.”"</p>
+                        <strong class="testimonio-autor editable-text" data-editable="true">— Patricia, 53 años</strong>
+                    </div></div></div></section>
+        <section><div class="container"><h2 class="section-title editable-text" data-editable="true">📍 Ubicación y horarios</h2><div class="grid-2"><div><p class="editable-text" data-editable="true"><strong>📞 RETO 5 DÍAS SIN HARINAS</strong></p><p class="editable-text" data-editable="true">Dunant 4303, Montevideo</p><p class="editable-text" data-editable="true">🕐 Lun-Vie 9am a 6pm · Sáb 9am a 5pm</p><a href="https://wa.me/59895583914" class="btn-llamar editable-link" style="display:inline-block; background:#ff6b00; color:white; padding:12px 30px; border-radius:50px; text-decoration:none; font-weight:bold; margin-top:15px;">📱 Contáctanos</a></div><div><div><iframe src="https://maps.google.com/maps?q=Dunant%204303%2C%20Montevideo&output=embed" width="100%" height="250" style="border:0; border-radius:16px;" allowfullscreen loading="lazy"></iframe><p style="text-align:center; margin-top:8px;"><a href="https://maps.google.com/?q=Dunant%204303%2C%20Montevideo" target="_blank" style="color:#ff6b00;">📌 Abrir en Google Maps</a></p></div></div></div></div></section>
+        <section><div class="container" style="text-align:center;"><h2 class="section-title editable-text" data-editable="true">📞 ¿Listo para el mejor servicio?</h2><a href="https://wa.me/59895583914" class="btn-wa editable-link" style="background:#ff6b00;">📞 Consultar ahora</a></div></section>
+        <footer><p class="editable-text" data-editable="true">RETO 5 DÍAS SIN HARINAS · Florida</p><p class="editable-text" data-editable="true">Lun-Vie 9am a 6pm · Sáb 9am a 5pm</p><div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;"><a href="https://www.facebook.com/share/1Ges9a7tGZ/" target="_blank">📘 Facebook</a><a href="https://instagram.com/marie_coach" target="_blank">📸 Instagram</a></div><p>© 2026</p></footer>
+        </body></html>
